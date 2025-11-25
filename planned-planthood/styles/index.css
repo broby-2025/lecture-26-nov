@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Maven+Pro:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    /* Fonts */
+    --font-maven: "Maven Pro", sans-serif;
+    --font-open-sans: "Open Sans", sans-serif;
+    --font-lato: "Lato", sans-serif;
+
+    /* Colors */
+    --bg-green: #0AA846EZ;
+    --bg-brown: #9E6D52;
+    --bg-red: #B93857;
+    --text-green: #055647;
+    --text-light: #ffffff;
+    --text-dark: #000000;
+}
+
+/* Normalisering */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1),
+        5px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Header */
+.header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    aspect-ratio: 1000 / 540;
+}
+
+.header-box {
+    display: grid;
+    place-items: center;
+    grid-column: auto / span 1;
+    grid-row: auto / span 1;
+    padding: 3rem;
+}
+
+.header-box-large {
+    grid-row: auto / span 2;
+    background-image: url('https://images.unsplash.com/photo-1615671524701-9c3dde8fdaa0?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: -10%;
+}
+
+.header-box-brown {
+    background-color: var(--bg-brown);
+}
+
+.header-box-green {
+    background-color: var(--bg-green);
+}
+
+.header-image {
+    width: 40%;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-linkk {
+    display: inline-block;
+    padding: 1.5rem 0;
+    text-align: center;
+    flex: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--font-maven);
+    font-weight: 500;
+    color: var(--text-green);
+    transition: all .3s ease;
+}
+
+.navigation-link:hover {
+    background-color: var(--bg-green);
+    color: var(--text-light);
+}
+
+/* Info Section */
+.info-section {
+    padding: 4rem;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    display: block;
+}
+
+.info-section-title {
+    grid-column: auto / span 2;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: var(--font-maven);
+    font-weight: 500;
+    font-size: 4rem;
+    color: var(--text-green);
+}
+
+.info-section-image-container {
+    background-color: var(--bg-green);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    grid-column: auto / span 1;
+    display: grid;
+    place-content: center;
+}
+
+.info-section-article {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    font-family: var(--font-open-sans);
+}
+
+.info-section-subtitle {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.info-section-text {
+    letter-spacing: 1.5px;
+    line-height: 20px;
+}
+
+.info-section-button {
+    background-color: var(--bg-green);
+    color: var(--text-light);
+    align-self: flex-end;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+}
+
+.info-section-button-left {
+    align-self: flex-start;
+}
+
+/* Plants Section */
+.plants-section {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    gap: 1rem;
+}
+
+.plants-section-title {
+    grid-column: auto / span 3;
+    text-align: center;
+    font-family: var(--font-lato);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.plants-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.plant {
+    grid-column: auto / span 1;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.plant-image-container {
+    width: 100%;
+    aspect-ratio: 1;
+    position: relative;
+    display: grid;
+    place-content: center;
+    background-size: cover;
+}
+
+/* Utility classes för plants cards, use these to se each plant's background image */
+.plant-tomato {
+    background-image: url('https://images.unsplash.com/photo-1596199050105-6d5d32222916?q=80&w=2639&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.plant-tomato-2 {
+    background-image: url('https://images.unsplash.com/photo-1565698228480-eec300c9679b?q=80&w=2806&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.plant-cucumber {
+    background-image: url('https://images.unsplash.com/photo-1518568403628-df55701ade9e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.plant-sugar-snaps {
+    background-image: url('https://images.unsplash.com/photo-1687878269804-63e8b50e3ddc?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.plant-turnip {
+    background-image: url('https://images.unsplash.com/photo-1555447740-03e40562af94?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.plant-squash {
+    background-image: url('https://images.unsplash.com/photo-1627989230968-d0b8e2d1a398?q=80&w=2962&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+
+.plant-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0;
+    gap: 1rem;
+    align-items: center;
+}
+
+.plant-title {
+    font-family: var(--font-lato);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: start;
+}
+
+.plant-date {
+    font-family: var(--font-open-sans);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: end;
+}
+
+.plant-user {
+    font-family: var(--font-lato);
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--text-dark);
+    text-align: start;
+}
+
+.plant-button {
+    font-family: var(--font-open-sans);
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text-light);
+    background-color: var(--bg-red);
+    padding: .5rem .5rem;
+}
+
+.plants-more-button {
+    align-self: center;
+    padding: 1rem;
+    background-color: var(--bg-green);
+    color: var(--text-light);
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--font-open-sans);
+}
+
+/* Footer */
+
+.footer-top {
+    background-image: url('https://images.unsplash.com/photo-1586281010691-f9da4be5b1f7?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: -20%;
+    display: flex;
+    display: grid;
+}
+
+.footer-left-container {
+    flex: 1;
+    aspect-ratio: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 2rem;
+    color: var(--text-light);
+    position: relative;
+    font-family: var(--font-maven);
+}
+
+.footer-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rqm;
+    z-index: -1;
+    font-weight: 500;
+}
+
+.footer-text {
+    font-size: 1.25rem;
+    display: flex;
+    gap: .5rem;
+}
+
+.footer-right-container {
+    flex: 1;
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+}
+
+.footer-bottom {
+    display: grid;
+    place-content: center;
+}
+
+.footer-to-top-link {
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-family: var(--font-open-sans);
+    font-size: 1.5rem;
+    color: var(--text-dark);
+}
