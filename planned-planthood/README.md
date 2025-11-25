@@ -1,6 +1,10 @@
 # Laga en "trasig" webbsida
 
-I veckans övning får ni arbeta med en webbsida där olika typer av fel har smugit sig in. Tanken är att ni ska undersöka sidan på samma sätt som ni senare kommer att granska och optimera egna projekt. Fokuset ligger alltså inte på att “gissa rätt” utan på att använda rätt verktyg och strategier för att systematiskt hitta vad som behöver lagas.
+I veckans övning får ni arbeta med en webbsida där olika typer av fel har smugit sig in. 
+Tanken är att ni ska undersöka sidan på samma sätt som ni senare kommer att granska och optimera egna projekt. 
+Fokuset ligger alltså inte på att “gissa rätt” utan på att använda rätt verktyg och strategier för att systematiskt hitta vad som behöver lagas.
+
+Orginalskissen [hittar ni här](https://www.figma.com/design/Hbrk29Q2rVzXiXcFWdTXDA/planned-planthood?node-id=0-1&p=f&t=AUX0WacgKRAFQtbc-0).
 
 Fundera särskilt på hur ni kan:
 
